@@ -68,9 +68,9 @@ Blocto injects a global API into websites at `window.bloctoProvider` and `window
 
 ### Register Push Notification
 ```
-let web3 = new Web3(window.ethereum) // window.tangerine or window.bloctoProvider
+let web3 = new Web3(window.ethereum) // or window.tangerine or window.bloctoProvider
 if (web3.currentProvider.isBlocto) {
-  let userId = await web3.currentProvider.registerPushNotification("{appId}")
-  // send userId to your backend
+  let encryptedUserId = await web3.currentProvider.registerPushNotification("{appId}")
+  // send encryptedUserId to your backend
 }
 ```
