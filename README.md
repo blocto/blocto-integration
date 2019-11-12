@@ -70,7 +70,19 @@ Blocto injects a global API into websites at `window.bloctoProvider` and `window
 ```
 let web3 = new Web3(window.ethereum) // or window.tangerine or window.bloctoProvider
 if (web3.currentProvider.isBlocto) {
-  let encryptedUserId = await web3.currentProvider.registerPushNotification("{appId}")
-  // send encryptedUserId to your backend
+  try {
+    let encryptedUserId = await web3.currentProvider.registerPushNotification("{appId}")
+    // send encryptedUserId to your backend
+  } catch(e) {
+    // error handling
+    // e.mesage: see the below
+  }
 }
 ```
+
+#### Error Handling
+- `blocked`: user clicked the block button.
+- `cancelled`: user clicked the cancel button.
+- `noNetworkConnection`: no network connection.
+- `appIdNotExist`: your app id doesn't exist.
+- `internal`: wallet app internal error. Please contact us.
