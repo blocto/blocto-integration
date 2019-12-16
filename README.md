@@ -14,6 +14,12 @@ Blocto injects a global API into websites at `window.bloctoProvider` and `window
 
 If user is on Ethereum network, the provider will be injected at `window.bloctoProvider` and `window.ethereum`.
 
+### Sign Message
+The api to call signing message is not different with other private key based wallets. The only difference is that the return value contains multiple signatures because Blocto is a smart contract based wallet. Therefore, please follow [EIP-1654](https://github.com/ethereum/EIPs/issues/1654) to verify the signature. There are some open-source implementations of EIP-1654 signature verification: [go](https://github.com/dapperlabs/dappauth) [js](https://github.com/dapperlabs/dappauth.js).
+
+### Send Transaction
+You don't need to change anything. If it works with MetaMask, it will also work on Blocto.
+
 ## Deep Linking
 
 ### Open Blocto dapp browser with a url and blockchain network
