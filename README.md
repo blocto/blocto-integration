@@ -20,6 +20,12 @@ The api to call signing message is not different with other private key based wa
 ### Send Transaction
 You don't need to change anything. If it works with MetaMask, it will also work on Blocto.
 
+### Send Batch Transaction
+Please take a look at [web3 doc](https://web3js.readthedocs.io/en/v1.2.0/web3-eth.html#batchrequest). For general web3 provider, BatchRequest send all transactions simultaneously. For Blocto provider, it will combine multiple transactions (in order) into **ONE** transaction. If one of transactions fails, all transactions will fail. This method can also save a lot of gas.
+
+If you would like to know more technical details, please see the smart contract code: [Etherscan](https://etherscan.io/address/0xed69ac1cab88cc82ff417131bdc69d93427107b4#code)
+
+
 ## Deep Linking
 
 ### Open Blocto dapp browser with a url and blockchain network
