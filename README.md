@@ -39,5 +39,8 @@ We will automatically detect that user is on Android/iOS/Web and show different 
 ## Push Notification
 Read more on <a href="PushNotification.md">PushNotification</a>.
 
+## Reward system
+Read more on <a href="RewardSystem.md">RewardSystem</a>.
+
 ## Contact Us
 If you have any questions, please feel free to contact us: <dev@portto.io>
